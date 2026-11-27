@@ -1,43 +1,110 @@
-Retail Store Sales Data Cleaning
+# Retail Store Sales Analysis Using Python
 
-  -About the Project
+## Project Overview
+This project focuses on analyzing retail store sales data using Python. The main objective is to explore sales transactions and understand customer purchasing behaviour, product categories, payment methods, and sales patterns.
 
-This is my first data cleaning project using Python and Pandas. I worked with a retail store sales dataset to understand how to clean raw data and make it ready for further analysis.
+## Dataset Information
+- Total Records: 12,575
+- Total Columns: 11
+- Dataset: Retail Store Sales
 
-## What I Did
+### Key Columns
+- Transaction ID
+- Customer ID
+- Category
+- Item
+- Price Per Unit
+- Quantity
+- Total Spent
+- Payment Method
+- Location
+- Transaction Date
+- Discount Applied
 
-- Checked the dataset structure, columns, and data types.
-- Identified missing values in different columns.
-- Filled missing prices using the total spent and quantity when both values were available.
-- Converted the transaction date column to datetime format.
-- Converted the discount column to a Boolean data type while keeping unknown values as missing.
-- Checked for duplicate rows and found no duplicates.
-- Verified that the total spent matched the price per unit multiplied by the quantity wherever the values were available.
-- Checked for zero and negative values in prices, quantities, and total amounts.
-
-## Tools Used
-
+## Tools & Technologies
 - Python
 - Pandas
+- NumPy
+- Matplotlib
 - Jupyter Notebook
-- CSV dataset
 
-## Dataset Overview
+## Project Workflow
 
-- Rows: 12,575
-- Columns: 11
-- Data: Retail transactions, including product categories, prices, quantities, payment methods, locations, and transaction dates.
+### 1. Data Loading
+- Imported the retail sales dataset using Pandas.
+- Loaded the CSV file into a DataFrame.
 
-## Handling Missing Values
+### 2. Data Inspection
+- Checked dataset dimensions using `shape`.
+- Inspected column names and data types using `info()`.
+- Viewed sample records using `head()`.
 
-Some missing values remained after cleaning because I could not determine their correct values from the available data. I left missing item names, quantities, total amounts, and discount statuses unchanged rather than filling them with guesses.
+### 3. Statistical Analysis
+- Used `describe()` to understand numerical columns.
+- Examined price, quantity, and total spending distributions.
 
-## Output
+### 4. Missing Value Analysis
+- Identified missing values using `isnull()`.
+- Calculated missing-value counts for each column.
+- Inspected records containing missing values.
+- Examined missing values in Price Per Unit, Item, Quantity, Total Spent, and Discount Applied.
 
-The cleaned dataset was saved as `retail_store_sales_cleaned.csv`.
+### 5. Data Exploration
+- Explored relationships between price per unit, quantity, and total spending.
+- Examined transaction details and customer purchase information.
 
-## What I Learned
+## Project Objective
+The project aims to understand retail transaction data and identify useful information about sales, customer purchases, product categories, and payment preferences.
 
-Through this project, I learned how to inspect a dataset, handle missing values, convert data types, check duplicates, validate calculations, and save a cleaned CSV file using Pandas.
+## Repository Files
+- `retail_store_sales.ipynb` – Python analysis notebook.
+- `retail_store_sales.csv` – Original dataset.
+- `retail_store_sales_cleaned.csv` – Cleaned dataset file.
+- `dashboard1.png`, `dashboard2.png`, `dashboard3.png` – Project dashboard screenshots.
 
-This project helped me get more practical experience with data cleaning and understand the importance of checking data quality before analysis.
+## Conclusion
+This project demonstrates the use of Python and Pandas for exploring retail sales data, inspecting dataset quality, identifying missing values, and performing basic statistical analysis.
+
+
+
+
+## Business Questions & Data Visualization
+
+The project explores the following business questions using Python, Pandas, and Matplotlib.
+
+### 1. How do sales change across different months?
+- Chart: Monthly Sales Trend
+- Visualized monthly revenue trends using a Line Chart.
+
+### 2. Which are the top 10 products generating the highest revenue?
+- Chart: Top 10 Products by Revenue
+- Used a Horizontal Bar Chart to identify top-performing products.
+
+### 3. How do discounts affect total revenue?
+- Chart: Revenue: With vs Without Discount
+- Compared revenue generated from discounted and non-discounted transactions using a Bar Chart.
+
+### 4. Who are the top 10 customers based on total spending?
+- Chart: Top 10 Customers by Total Spending
+- Used a Horizontal Bar Chart to identify the highest-spending customers.
+
+### 5. Which payment method generates the highest revenue?
+- Chart: Revenue by Payment Method
+- Compared revenue across different payment methods using a Bar Chart.
+
+### 6. Which product category has the highest average spending?
+- Chart: Average Spending by Category
+- Used a Bar Chart to compare average customer spending across product categories.
+
+## Key Analysis Areas
+- Monthly sales performance
+- Top-performing products
+- Discount-based revenue comparison
+- Customer spending analysis
+- Payment method performance
+- Category-wise average spending
+
+## Conclusion
+This project demonstrates how Python-based Exploratory Data Analysis (EDA) can help understand retail sales performance, customer purchasing behaviour, product performance, and revenue patterns.
+
+
